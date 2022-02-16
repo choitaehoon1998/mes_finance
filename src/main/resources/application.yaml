@@ -1,0 +1,32 @@
+spring:
+  file:
+    upload:
+      filePath: /uploadDir
+  datasource:
+    driver-class-name:
+    url: jdbc:mysql://115.68.193.148:3306/mesnew?serverTimezone=UTC&characterEncoding=UTF-8
+    username: mesnew
+    password: 'mesnew!@#$%'
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+  log:
+    server:
+      uri: 'http://beaf-175-119-149-98.ngrok.io/log'
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type: trace
